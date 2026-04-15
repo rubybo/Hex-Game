@@ -112,10 +112,10 @@ const Hexagon = ({ text, isCenter, isEmpty, isNumber, style, className = "" }: H
         className="absolute inset-0 w-full h-full drop-shadow-md"
         style={{ zIndex: -1 }}
       >
-        <polygon 
-          points={`${W*0.25},0 ${W*0.75},0 ${W},${H/2} ${W*0.75},${H} ${W*0.25},${H} 0,${H/2}`} 
+        <polygon
+          points={`${W*0.25},0 ${W*0.75},0 ${W},${H/2} ${W*0.75},${H} ${W*0.25},${H} 0,${H/2}`}
           fill={isEmpty ? '#f8fafc' : isCenter ? '#3b82f6' : '#10b981'}
-          stroke={isEmpty ? '#cbd5e1' : isCenter ? '#2563eb' : '#059669'}
+          stroke={isEmpty ? '#64748b' : isCenter ? '#1e3a8a' : '#065f46'}
           strokeWidth="4"
           strokeLinejoin="round"
         />
@@ -330,9 +330,9 @@ export default function App() {
                     transition={{ duration: isWrong ? 0.4 : 0.2 }}
                     onClick={() => handleStepClick(step)}
                     className={`px-5 py-3 rounded-xl shadow-sm border-2 text-sm sm:text-base font-semibold transition-all
-                      ${isWrong 
-                        ? 'bg-red-50 border-red-400 text-red-700 shadow-red-100' 
-                        : 'bg-white border-slate-200 text-slate-700 hover:border-blue-500 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:-translate-y-1'
+                      ${isWrong
+                        ? 'bg-red-50 border-red-600 text-red-700 shadow-red-100'
+                        : 'bg-white border-slate-400 text-slate-700 hover:border-blue-700 hover:bg-blue-50 hover:text-blue-700 hover:shadow-md hover:-translate-y-1'
                       }
                     `}
                     style={{ maxWidth: '280px', flex: '1 1 200px' }}
